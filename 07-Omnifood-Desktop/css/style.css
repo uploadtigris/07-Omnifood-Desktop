@@ -15,7 +15,7 @@ default: 1
 
 - Primary: #e67e22
 - Tints: #fdf2e9
-- Shades:
+- Shades:#cf711f
 - Accent:
 - Grey:
 #555
@@ -50,27 +50,14 @@ html {
 }
 
 body {
-    font-family: sans-serif;
+    font-family: 'Rubik', sans-serif;
     line-height: 1;
     font-weight: 400;
     color: #555;
 }
-
-.section-hero {
-    background-color: #fdf2e9;
-    padding: 9.6rem;
-}
-
-.hero {
-    /* When the element is larger than the container, it will fill 100% of it */
-    max-width: 130rem;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 9.6rem;
-    /* centers into the grid */
-    align-items: center;
-}
+/*****************************/
+/* GENERAL REUSABLE COMPONENTS*/
+/*****************************/
 
 .heading-primary {
     font-size: 5.2rem;
@@ -79,25 +66,6 @@ body {
     color: #333;
     letter-spacing: -0.5px;
     margin-bottom: 3.2rem;
-}
-
-.hero-description {
-    font-size: 2rem;
-    line-height: 1.6;
-    margin-bottom: 4.8rem;
-}
-
-.btn:link, .btn:visited {
-    display: inline-block;
-    /* to have the padding work as expected, we must make this an inline block. */
-    font-size: 2rem;
-    padding: 1.6rem 3.2rem;
-    border-radius: 9px;
-    text-decoration: none;
-
-    /* transistion through two values using an animation. */
-    /* ALWAYS PUT THE TRANSISTION ON THE ORIGINAL STATE */
-    transition: background-color 0.3s;
 }
 
 .btn--full:link, .btn--full:visited  {
@@ -122,11 +90,109 @@ body {
     box-shadow: 0 0 0 3px #fff;
 }
 
+/* this is a helper class to give the left button some right margin. */
+.margin-right-sm {
+    margin-right: 1.6rem !important;
+}
+
+
+/*****************************/
+/* HEADER*/
+/*****************************/
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: items;
+}
+
+.logo {
+    height: 2.4rem;
+}
+/*****************************/
+/* HERO SECTION*/
+/*****************************/
+
+.section-hero {
+    background-color: #fdf2e9;
+    padding: 9.6rem;
+}
+
+.hero {
+    /* When the element is larger than the container, it will fill 100% of it */
+    max-width: 130rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 9.6rem;
+    /* centers into the grid */
+    align-items: center;
+}
+
+
+
+.hero-description {
+    font-size: 2rem;
+    line-height: 1.6;
+    margin-bottom: 4.8rem;
+}
+
+.btn:link, .btn:visited {
+    display: inline-block;
+    /* to have the padding work as expected, we must make this an inline block. */
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 1.6rem 3.2rem;
+    border-radius: 9px;
+    text-decoration: none;
+
+    /* transistion through two values using an animation. */
+    /* ALWAYS PUT THE TRANSISTION ON THE ORIGINAL STATE */
+    transition: background-color 0.3s;
+}
+
+
 .hero-img{
     width: 100%;
 }
 
-/* this is a helper class to give the left button some right margin. */
-.margin-right-sm {
-    margin-right: 1.6rem !important;
+
+
+.delivered-meals {
+    /* grid over flex bc we allow the objects to determine the size of the columns */
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+    margin-top: 8rem;
+}
+
+.delivered-imgs {
+    display: flex;
+}
+
+.delivered-imgs img {
+    display: flex;
+    height: 4.8rem;
+    width: 4.8rem;
+    border-radius: 50%;
+
+    /* to get the images to overlap */
+    margin-right: -1.6rem;
+    /* this covers the border of the profile pics */
+    border: 3px solid #fdf2e9;
+}
+
+/* this fixed the margin hanging off the end of the portrait pictures. */
+.delivered-imgs img:last-child {
+    margin: 0;
+}
+
+.delivered-text {
+    font-size:1.8rem;
+    font-weight: 600;
+}
+
+.delivered-text span {
+    color: #cf711f;
+    font-weight: 700;
 }
