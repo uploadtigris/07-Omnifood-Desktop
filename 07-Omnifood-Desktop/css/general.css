@@ -37,6 +37,7 @@ Paragraph Default: 1.6
 --- 06 BORDER-RADIUS
 
 Default: 9px
+Medium: 11px
 
 
 --- 07 WHITE SPACE
@@ -138,6 +139,22 @@ body {
     letter-spacing: 0.75px;
 }
 
+.btn:link, .btn:visited {
+    display: inline-block;
+    /* to have the padding work as expected, we must make this an inline block. */
+
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 1.6rem 3.2rem;
+    border-radius: 9px;
+    text-decoration: none;
+
+    /* transistion through two values using an animation. */
+    /* ALWAYS PUT THE TRANSISTION ON THE ORIGINAL STATE */
+    /* transition: background-color 0.3s; */
+    transition: all 0.3s;
+}
+
 .btn--full:link, .btn--full:visited  {
     background-color: #e67e22;
     color: #fff;
@@ -163,4 +180,8 @@ body {
 /* this is a helper class to give the left button some right margin. */
 .margin-right-sm {
     margin-right: 1.6rem !important;
+}
+
+strong {
+    font-weight: 500;
 }
