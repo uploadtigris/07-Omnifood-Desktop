@@ -95,6 +95,7 @@ body {
     grid-template-columns: repeat(3, 1fr);
 }
 
+
 .grid--4-cols {
     grid-template-columns: repeat(4, 1fr);
 }
@@ -180,6 +181,10 @@ body {
 /* this is a helper class to give the left button some right margin. */
 .margin-right-sm {
     margin-right: 1.6rem !important;
+}
+
+.margin-bottom-md {
+    margin-bottom: 4.8rem !important;
 }
 
 strong {
