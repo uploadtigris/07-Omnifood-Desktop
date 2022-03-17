@@ -178,6 +178,31 @@ body {
     box-shadow: 0 0 0 3px #fff;
 }
 
+.link:link,
+.link:visited {
+    /* if we want to use PADDING we must set this to an inline-block */
+    color: #e67e22;
+    text-decoration: none;
+    /* sets the current color to the border below */
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 2px;
+    transition: all 0.3sec;
+}
+
+.link:hover,
+.lin:active {
+    color: #cf711f;
+    /* I prefer this version of hidding the underline */
+    /* border-bottom: hidden; */
+
+    /* this is how the tutorial did it */
+    border-bottom: 1px solid transparent;
+
+}
+
+/* HELPER/SETTING CLASSES */
+/* we set this up so that the orginal class settings can be reusable */
+
 /* this is a helper class to give the left button some right margin. */
 .margin-right-sm {
     margin-right: 1.6rem !important;
@@ -185,6 +210,10 @@ body {
 
 .margin-bottom-md {
     margin-bottom: 4.8rem !important;
+}
+
+.center-text {
+    text-align: center;
 }
 
 strong {
