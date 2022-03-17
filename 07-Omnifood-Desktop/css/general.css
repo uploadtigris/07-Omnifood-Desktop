@@ -190,7 +190,7 @@ body {
 }
 
 .link:hover,
-.lin:active {
+.link:active {
     color: #cf711f;
     /* I prefer this version of hidding the underline */
     /* border-bottom: hidden; */
