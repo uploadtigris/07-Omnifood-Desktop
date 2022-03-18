@@ -68,12 +68,13 @@ Medium: 11px
 
 /* this sets the rem unit */
 html {
-    font-size: 10px;
+    /* font-size: 16px; */
 
     /* 10px / 16px (default) = 0.625 = 62.5% */
     /* percentage of users given font-size */
-    /* font-size: 62.5%; */
-
+    font-size: 62.5%;
+    /* all elements that overflow into the x-axis will be hidden; */
+    overflow-x: hidden;
 }
 
 body {
@@ -81,6 +82,9 @@ body {
     line-height: 1;
     font-weight: 400;
     color: #555;
+    /* all elements that overflow into the x-axis will be hidden; */
+    /* only works if nothing is absolutely positioned to the body */
+    overflow-x: hidden;
 }
 /*****************************/
 /* GENERAL REUSABLE COMPONENTS*/
@@ -262,6 +266,7 @@ body {
     display: flex;
     align-items: center;
     gap: 1.6rem;
+    line-height: 1.2;
 }
 
 .list-icon {
