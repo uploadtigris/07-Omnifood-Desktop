@@ -420,6 +420,48 @@
     padding: 9.6rem 0;
 }
 
+.pricing-plan{
+    border-radius: 11px;
+    width: 75%;
+}
+
+.pricing-plan--starter {
+    justify-self: end;
+    border: 2px solid #fdf2e9;
+    padding: 4.6rem;
+}
+
+/* this is for the second item only, places emphasis on the value this option holds */
+.pricing-plan--complete {
+    background-color: #fdf2e9;
+    padding: 4.8rem;
+    position: relative;
+
+    /* anything overflowing out of the parent container will be hidden
+    in this case, the best value tag */
+    overflow: hidden;
+
+}
+
+/* creates an element after the class selected */
+.pricing-plan--complete::after {
+    content: "Best value";
+    position: absolute;
+
+    top: 6%;
+    right: -18%;
+
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #333;
+    background-color: #ffd43b;
+    padding: 0.8rem 8rem;
+    
+    /* the 'best value' tag is rotated here */
+    transform: rotate(45deg);
+}
+
 .plan-header {
     text-align: center;
     margin-bottom: 4.8rem;
@@ -456,4 +498,66 @@
 .plan-sign-up {
     text-align: center;
     margin-top: 4.8rem;
+}
+
+.plan-details {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.feature-icon{
+ color: #e67e22;
+ height: 3.2rem;
+ width: 3.2rem;
+ background-color: #fdf2e9;
+ margin-bottom: 3.2rem;
+ padding: 1.6rem;
+ border-radius: 50%;
+}
+
+
+
+.feature-title{
+    font-size: 2.4rem;
+    color:#333;
+    font-weight: 700;
+    margin-bottom: 1.6rem;
+}
+
+.feature-text{
+    font-size: 1.8rem;
+    line-height: 1.8;
+}
+
+/*****************************/
+/* CTA SECTION*/
+/*****************************/
+
+.section-cta {
+    padding: 9.6rem 0;
+}
+
+.cta {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    /* background-color: #e67e22; */
+     /* top and bottom \ left and right \ blur */
+    box-shadow: 0 2.4px 4.8rem rgba(0, 0, 0, 0.15);
+    border-radius: 11px;
+
+    background-image: linear-gradient(to right bottom, #eb984e, hsl(28, 80%, 52%));
+    overflow: hidden;
+    height: 50rem;
+}
+
+.cta-text-box {}
+
+.cta-img-box {
+    /* the '..' moves out of the CSS folding and into the full file */
+    background-image: linear-gradient(to right bottom, hsla(28, 80%, 61%, 0.35), hsl(28, 80%, 52%, 0.35)), url('../img/eating.jpg');
+
+    /* what ever is the background, the image will cover it entirely. */
+    background-size: cover;
+    background-position: center;
 }
