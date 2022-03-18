@@ -368,15 +368,24 @@
 /*****************************/
 
 .section-testimonials {
-    padding: 9.6rem 0;
     background-color: #fae5d3;
+    display: grid;
+    /* done this way so we can think of it as a % */
+    grid-template-columns: 55fr 45fr;
+    /* all items are now centered to the middle point. */
+    align-items: center;;
+}
+
+.testimonials-container{
+    padding: 9.6rem;
 }
 
 /* setting the testimonial grid */
 .testimonials {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap:4.8rem;
+    row-gap:4.8rem;
+    column-gap: 8rem;
 }
 
 .testimonial-img {
@@ -392,13 +401,19 @@
 }
 .testomonial-name {
     font-size: 1.6rem;
-    color: #777;
+    color: #6F6F6F;
 }
 
 .gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.6rem;
+    padding: 1.6rem;
+}
+
+.gallery-item {
+    /* this makes it so that the edge do not escape the parent element */
+    overflow: hidden;
 }
 
 .gallery-item img{
@@ -407,4 +422,10 @@
 
     /* this makes the images flexible to the width of the page */
     width: 100%;
+    transition: all 0.4s;
+}
+
+.gallery-item img:hover{
+    /* this makes the images grow larger when you hover over them */
+    transform: scale(1.1);
 }
