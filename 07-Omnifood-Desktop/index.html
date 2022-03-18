@@ -396,12 +396,36 @@
                             </p>
 
                             <form class="cta-form" action="#">
-                                <label>Full Name</label>
-                                <input id="" type="text" placeholder="John Smith"/>
 
-                                <label>Email address</label>
-                                <input type="email" placeholder="me@example.com"/>
-                                <button class="btn">Sign up now</button>
+                                <!-- When we seperate these by div elements, this turns them into block elements 
+                                which creates a line break after each element. -->
+
+                                <div>
+                                    <label for="full-name">Full Name</label>
+                                    <input id="full-name" type="text" placeholder="John Smith" required/>
+                                </div>
+
+                                <div>
+                                    <label for="email">Email address</label>
+                                    <input id="email" type="email" placeholder="me@example.com" required/>
+                                </div>    
+                                    
+                                <div>
+                                    <label for="select-where">
+                                        Where did you hear from us?
+                                    </label>
+                                    <select id="select-where" required>
+                                        <option value="">Please choose an option</option>
+                                        <option options="friends">Friends and family</option>
+                                        <option options="friends">Youtube Video</option>
+                                        <option options="friends">Podcast</option>
+                                        <option options="friends">Facebook Ad</option>
+                                        <option options="friends">Other</option>
+                                    </select>
+                                </div>
+
+                                <button class="btn btn--form">Sign up now</button>
+
                             </form>
                         </div>
                         <!-- the'role' of this element is to be like an image -->
