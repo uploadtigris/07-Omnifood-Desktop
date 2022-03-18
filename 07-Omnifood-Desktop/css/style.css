@@ -12,6 +12,9 @@
 
     height: 9.6rem;
     padding: 0 4.8rem; 
+
+    /* this is always needed for the parent element of the absolutely positioned item */
+    position: relative;
 }
 
 .logo {
@@ -28,7 +31,7 @@
     /* items are next to each other. */
     display: flex;
     align-items: center;
-    gap: 3.2rem;
+    gap: 4.8rem;
 }
 
 .main-nav-link:link,
@@ -61,6 +64,30 @@
 
 }
 
+/* MOBILE */
+.btn-mobile-nav{
+    border:none;
+    background: none;
+    cursor: pointer;
+
+    display: none;
+}
+
+.icon-mobile-navigation {
+    height: 4.8rem;
+    width: 4.8rem;
+    color: #333;
+}
+
+/* how to select the element by 'name' */
+.icon-mobile-navigation[name="close-outline"] {
+    /* this is hidding the element */
+    display: none;
+}
+
+/* <ion-icon class="icon-mobile-navigation" name="menu-outline"></ion-icon>
+<ion-icon class="icon-mobile-navigation" name="close-outline"></ion-icon> */
+
 
 /*****************************/
 /* HERO SECTION*/
@@ -70,6 +97,8 @@
     background-color: #fdf2e9;
     padding: 4.8rem 0 9.6rem 0;
 }
+
+
 
 .hero {
     /* When the element is larger than the container, it will fill 100% of it */
