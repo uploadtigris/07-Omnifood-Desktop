@@ -551,7 +551,21 @@
     height: 50rem;
 }
 
-.cta-text-box {}
+.cta-text-box {
+    padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+    color: #45260a;
+
+}
+
+.cta .heading-secondary{
+    color:#45260a;
+    margin-bottom: 3.2rem;
+}
+
+.cta-text{
+    font-size: 1.8rem;
+    line-height: 1.8;
+}
 
 .cta-img-box {
     /* the '..' moves out of the CSS folding and into the full file */
@@ -561,3 +575,4 @@
     background-size: cover;
     background-position: center;
 }
+
