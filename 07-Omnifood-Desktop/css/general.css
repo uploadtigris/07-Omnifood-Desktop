@@ -75,6 +75,9 @@ html {
     font-size: 62.5%;
     /* all elements that overflow into the x-axis will be hidden; */
     overflow-x: hidden;
+
+    /* this doesn't work on many browsers and devices */
+    /* scroll-behavior: smooth; */
 }
 
 body {
@@ -86,6 +89,7 @@ body {
     /* only works if nothing is absolutely positioned to the body */
     overflow-x: hidden;
 }
+
 /*****************************/
 /* GENERAL REUSABLE COMPONENTS*/
 /*****************************/
