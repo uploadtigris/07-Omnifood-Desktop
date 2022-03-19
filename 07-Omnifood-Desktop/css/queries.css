@@ -186,7 +186,8 @@
         visibility: visible;
 
         /* this is the initial state instead of the transform in .,ain-nav */
-        transform: translateX(0);
+        /* transform: translateX(0); */
+        /* ^^^ add this back when we do JS */
     }
 
     /* only open when when the navigation is open */
@@ -254,9 +255,81 @@
 }
 
 
+/*****************************/
+/* BELOW 550px (iPhones) */
+/*****************************/
 
+/* 20px x 27 = 550... our target px cross over */
+@media (max-width: 27em) {
+    .grid {
+        row-gap: 4.8rem;
+    }
+    
+    .grid--2-cols,
+    .grid--3-cols,
+    .grid--4-cols {
+        grid-template-columns: 1fr;
+    }
 
+    .btn,
+    .btn:link, 
+    .btn:visited {
+        padding: 2.4rem 1.6rem;
+    }
 
+    .section-hero {
+        background-color: #fdf2e9;
+        padding: 2.4rem 0 6.4rem 0;
+    }
+
+    .hero {
+        padding: 0 3.2rem;
+    }
+
+    .hero-img {
+        width: 80%;
+    }
+
+    .logos img {
+        height: 1.2rem;
+    }
+
+    /* selecting the second child of the container */
+    .step-img-box:nth-child(2) {
+        grid-row: 1;
+    }
+
+    .step-img-box:nth-child(6) {
+        grid-row: 5;
+    }
+
+    .step-img-box {
+        transform: translateY(24px);
+    }
+
+    .testimonials {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.6rem;
+    }
+
+    .cta {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-text-box {
+        padding: 3.2rem;
+    }
+
+    .cta-img-box {
+        height: 32rem;
+        /* made it apperar first */
+        grid-row: 1;
+    }
+}
 
 /*- SPACING SYSTEM (px)
 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
