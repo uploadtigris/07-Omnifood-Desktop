@@ -139,6 +139,8 @@
     /* MOBILE NAVIGATION */
     .btn-mobile-nav{
         display: block;
+        /* brings this element to the front */
+        z-index:9999;
     }
 
     .main-nav {
@@ -186,8 +188,8 @@
         visibility: visible;
 
         /* this is the initial state instead of the transform in .,ain-nav */
-        /* transform: translateX(0); */
-        /* ^^^ add this back when we do JS */
+        transform: translateX(0);
+        
     }
 
     /* only open when when the navigation is open */
